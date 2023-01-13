@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java Script Lab3</title>
+  </head>
+  <body>
+    <h1>Area calculator</h1>
+    <script>
+      var shape = prompt(
+        "Enter Operation:\n 1-Circle\n 2-Square \n 3-Triangle \n 4-Rectangle \n "
+      );
+      var dim1 = prompt("Enter The First Dimention....");
+      var dim2 ;
+      if ((shape !="Circle" )&& (shape !="1") && (shape !="Square" )&&(shape != "2"))
+       { dim2 = prompt("Enter The Second Dimention...");}
+      var area;
+      switch (shape) {
+        case "Circle":
+        case "1":
+          area = 3.14 * dim1 * dim1;
+          alert("the Area  of The Circle with radius: " + dim1 + " is " + area);
+          break;
+        case "Square":
+        case "2":
+          area = 1.0 * dim1 * dim1;
+          alert("the Area  of The Square with dimension: " + dim1 + " is " + area);
+
+          break;
+        case "Triangle":
+        case "3":
+          area = 0.5 * dim1 * dim2;
+          alert(
+            "the Area  of The Triangle with 2 dimension: " +
+              dim1 +
+              " , " +
+              dim2 +
+              " is " +
+              area
+          );
+
+          break;
+        case "Rectangle":
+        case "4":
+          area = 1.0 * dim1 * dim2;
+          alert(
+            "the Area  of The Rectangle with 2 dimension: " +
+              dim1 +
+              " , " +
+              dim2 +
+              " is " +
+              area
+          );
+
+          break;
+        default:
+          alert("Un avilable Shape......!");
+      }
+    </script>
+  </body>
+</html>

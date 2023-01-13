@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Lab3</title>
+</head>
+<body>
+  <h1>phone book app</h1>
+  <script>
+  
+//phonebook user can add new contact (name,phone) and can search for any contact by name
+
+var contacts = [
+    {
+        name:"ahmed",
+        phone:"123"
+    }
+]
+
+
+function addNewContact(){
+    var newContact = {};
+    newContact.name = prompt("enter contact name");
+    newContact.phone = prompt("enter contact phone");
+    contacts.push(newContact);
+    alert("name = "+newContact.name +" \n phone = "+newContact.phone+"\n Added Successfully...!");
+            
+}
+
+function searchForContact(){
+    var searchKeyword = prompt("enter name or phone")
+    for(var i =0;i<contacts.length;i++){
+        var currentContact = contacts[i];
+        if(searchKeyword == currentContact.name || searchKeyword == currentContact.phone){
+            alert("name = "+currentContact.name +" \n phone = "+currentContact.phone);
+            break;
+        }
+
+    }
+}
+
+
+function runPhoneBook(){
+    var stop = false;
+    do{
+        var op = prompt("what do you want :\n 1-add \n 2-search \n 3-exit");
+        switch(op){
+            case "add":
+            case "1":  
+                addNewContact();
+            break;
+            case "search":
+            case "2":  
+                searchForContact();
+
+            break;
+            // case "Show All":
+            // case "3":
+            //     //prompt("All Contacts :\n"+"name   phone\n"+contacts[0].name+"  "+contacts[0].phone);
+            //     let usernames = Object.keys(contacts);
+            //     for (let i = 0; i < usernames.length; i++) {
+            //     document.write("All Contacts :\n name   phone\n"+`${usernames[i]} : ${contacts[usernames[i]]}` );
+             //   }
+            break;
+            case "exit":
+            case "3":
+                stop = true;
+            break;
+
+        }
+    }while(!stop)
+}
+
+runPhoneBook();
+
+  </script>
+</body>
+</html>

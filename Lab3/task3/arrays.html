@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Lab3</title>
+</head>
+<body style="line-height:35px">
+  <h1>Objects predefined methods</h1>
+  <script>
+    var num=prompt("Enter Number to  test Method :"+
+    "\n 1- concat( ) \n 2- reverse( )   \n 3- sort( )  "+
+    "\n 4- fill( )  \n 5-every( )  \n 6-some( )"+
+    "\n 7- at( ) \n 8- map( ) \n 9- forEach( ) \n 10-copyWithin( )");
+
+    Test(num);
+    
+    function Test(num)
+    {
+      switch (num) {
+         case "1":
+            alert("method 1: concat()\n"+
+            "This method takes two parameter--->[  arr1.concat(arr2)  ]"+
+            "\nUsage: This method used to Merge Two or More Arrays");
+            var arr1 = ["A", "B", "C"];
+            var arr2 = ["D", "E", "F"];
+            var arr = arr1.concat(arr2);
+            document.write("<h2>method 1: concat( )</h2>");
+            document.write("The elements of the first array: "+arr1+"<br>");
+            document.write("The elements of the secound array: "+arr2+"<br>");  
+            document.write("The elements of arr1.concat(arr2): "+arr+"<br>"); 
+            break;
+          case "2":
+            alert("method 2: reverse()\n"+
+            "This method takes one parameter--->[  arr1.reverse()  ]"+
+            "\nUsage: This method used to Reverse the elements in an array in place.");
+            var arr = ["A", "B", "C"];
+            document.write("<h2>method 2: reverse( )</h2>");
+            document.write("The elements of the Original array: "+arr+"<br>");
+            var arr_rev = arr.reverse();
+            document.write("The elements of the reversed array: "+arr_rev+"<br>");  
+            break;
+          case "3":
+            alert("method 3: sort()\n"+
+            "This method takes one parameter--->[  arr1.sort()  ]"+
+            "\nUsage: Sorts an array in place. This method mutates the array and returns a reference to the same array.");
+            var arr = ["F", "A","D", "B"];
+            document.write("<h2>method 3: sort( )</h2>");
+            document.write("The elements of the Original array: "+arr+"<br>");
+            document.write("The elements of the Sorted array: "+arr.sort()+"<br>");  
+            document.write("----------other Example--------------<br>");  
+            var ar = ["100","200","123","101","200","213","911"];
+            document.write("The elements of the Original array: "+ar+"<br>");
+            document.write("The elements of the reversed array: "+(ar.sort())+"<br>");  
+            break;
+            case "4":
+            alert("method 4: fill()\n"+
+            "This method takes at least one parameter & at most 3 parameter\n"+
+            "\nUsage: Changes all array elements from start to end index to a static value and returns the modified array");
+            var arr = ["N", "A","D", "l","Z","M"];
+            document.write("<h2>method 4: fill( )</h2>");
+            document.write("The elements of the Original array: "+arr+"<br>");
+            var arr = ["N", "A","D", "l","Z","M"];
+            document.write("Fill value B to all positions in the array: "+arr.fill("B")+"<br>");  
+            var arr = ["N", "A","D", "l","Z","M"];
+            document.write("Fill value B from position 2 till position 4 in array: "+arr.fill("B",2,4)+"<br>");  
+            var arr = ["N", "A","D", "l","Z","M"];
+            document.write("Fill value 5 from position 1 till last position in array: "+arr.fill("B",1)+"<br>");  
+            break;
+            case "5":
+            alert("method 5: every()\n"+
+            "This method takes one parameter--->[  arr1.every(check_function)  ]\n"+
+            "\nUsage: Determines whether all the members of an array satisfy the specified test Return boolean value.");
+            var isachieve = (currentValue) => currentValue < 40;
+            var Array1 = [1, 30, 39, 29, 10, 20];
+            var Array2 = [1, 50, 39, 29, 10, 20];
+            document.write("<h2>method 5: every( )</h2>");
+            document.write("All Element in ["+Array1+ "]less than 40 ?"+(Array1.every(isachieve))+"<br>");
+            document.write("All Element in ["+Array2+ "]less than 40 ?"+(Array2.every(isachieve)));
+             
+            break;
+            case "6":
+            alert("method 6: some()\n"+
+            "This method takes one parameter--->[  arr1.some(check_function)  ]\n"+
+            "\nUsage: Determines whether any the members of an array satisfy the specified test Return boolean value.");
+            var isachieve = (currentValue) => currentValue < 40;
+             Array1 = [60, 50, 70, 80, 90 ];
+             Array2 = [10, 50, 70, 80, 90];
+            document.write("<h2>method 6: some( )</h2>");
+            document.write("Any Element in ["+Array1+ "]less than 40 ?"+(Array1.some(isachieve))+"<br>");
+            document.write("Any Element in ["+Array2+ "]less than 40 ?"+(Array2.some(isachieve)));
+             
+            break;
+            case "7":
+            alert("method 7: at()\n"+
+            "This method takes one parameter --->[  arr1.at(index)  ]\n"+
+            "\nUsage: This method used to get element in specific index in array, takes positive and negative values"
+              +"Return element of specified index");
+              var A1 = [60, 50, 70, 80, 90 ];
+            document.write("<h2>method 7: at( )</h2>");
+            document.write("the Element of index"+" <b>-2</b>"+"in ["+A1+ "] is: "+(A1.at(-2))+"<br>");
+            document.write("the Element of index"+" <b>2</b>"+"in ["+A1+ "] is: "+(A1.at( 2))+"<br>"); 
+            break;
+            case "8":
+            alert("method 8: map()\n"+
+            "This method takes (arrow_function)\n"+
+            "\nUsage: This method used to assign new values to elmemnts of specific array under arrow function"
+              +"Return  new array with updayed values");
+            const numbers = [1, 4, 9,16,25];
+            const roots = numbers.map((num) => Math.sqrt(num));
+            document.write("<h2>method 8: map( )</h2>");
+            document.write("the array of numbers is ["+numbers+ "]<br>");
+            document.write("the array of roots is ["+roots+ "]<br>");
+            break;
+            case "9":
+            alert("method 9: forEach()\n"+
+            "This method used to Performs the specified action for each element in an array."
+              +"Return  new array with updayed values");
+              var array = [60, 50, 70, 80, 90 ];
+            document.write("<h2>method 8: forEach( )</h2>");
+            document.write("the Elements of the array [ "+array+ "] Are: "+"<br>"); 
+            document.write("See Elements in console");
+            let count = 0;
+            array.forEach((element) => { 
+              console.log({ element });
+              count++;
+            });
+            break;
+            case "10":
+            alert("method 10: copyWithin()\n"+
+            "This method takes one parameter or two parameter or three parameters\n"+
+            "\n [ array1.copyWithin(target) ] or [ array1.copyWithin(target,start) ]or [ array1.copyWithin(target,start,end) ]"+
+            "\nUsage: This method used to copy element from array to specific position"
+              +"Return updated array");
+              var array1 = [5, 12, 8, 130, 44];
+            document.write("<h2>method 10: copyWithin( )</h2>");
+            document.write("the Array of ["+array1+"] after applying [array1.copyWithin(-1)] is "+(array1.copyWithin(-1))+"<br>");
+            document.write("the Array of ["+array1+"] after applying [array1.copyWithin(0,3)] is "+(array1.copyWithin(0,3))+"<br>");
+            document.write("the Array of ["+array1+"] after applying [array1.copyWithin(1,3,4)] is "+(array1.copyWithin(1,3,4))+"<br>");
+           
+            break;
+          default:
+            alert("Un avilable Method......!");
+        }//switch
+      }//method
+  </script>
+</body>
+</html>

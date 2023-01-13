@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Lab3</title>
+</head>
+<body style="line-height:35px;font-size: x-large;">
+  <h1> Arrays predefined methods</h1>
+  
+  <script>
+    
+document.write("Method 1:  Object.isExtensible()<br>"+
+"This method takes one parameter (object_name)<br>"+
+"Usage: This method used to check whether the object is extensible or not<br>"+
+"Return boolean value (true if object extensible, false if object not extensible)<br>"+
+"Example<br>");
+const object1 = {};
+document.write("The Output of : <b>Object.isExtensible(object1)</b> for const object1 = {} is :"+(Object.isExtensible(object1))); //true
+document.write("<hr>");
+document.write("Other Methods are be commented in code uncomment it & check console");
+/*
+//------------------------------------------------------------------------------------------------
+document.write(" Method 2:  Object.defineProperty()<br>"+
+"This method takes three parameters (object_name, key, discriptor)<br>"+
+"Usage: This method used to added new key or modified value of <br>"+
+"existed key in the object with restriction (writable: false) <br>"+
+"Return the updated object<br>"+
+"Example");
+const object2 = {'Name':'Nada'};
+//modify value of key Name in object object2 with restriction 
+Object.defineProperty(object2, 'Name', {
+  value: 'Nada', 
+  writable: false
+});
+object2.Name = 'R';// Throws an error in strict mode 
+//(can't update the value because of existance of writable: false)
+//Adding new key with its value to object object2
+Object.defineProperty(object2, 'Age', {
+    value: '22', 
+    writable: true 
+  });
+  object2.Age = 23; // Doesn't throw an error in strict mode
+//update the value because of existance of writable: true)
+console.log(object2);//{"Name": "Nada", 'Age': '23'}
+/*
+//-----------------------------------------------------------------------------------------
+// Method 3:  Object.preventExtensions()
+// This method takes one parameter (object_name)
+// Usage: This method used to prevent from adding or modifying the object 
+//Return object 
+//Example
+const object5 = {};
+Object.preventExtensions(object5);
+console.log(Object.isExtensible(object5)); //false
+try {
+  Object.defineProperty(object5, 'Name', {
+    value: 'Nada'
+  });
+} catch (e) {
+  console.log(e);//output: TypeError: Cannot define property Name, object is not extensible
+}
+//------------------------------------------------------------------------------------------------
+// Method 4:  Object.defineProperties()
+// This method takes (object_name, props (more one key))
+// Usage: This method used to  add or modify more one prop in the object 
+//Return updated object 
+//Example
+const object4 = {};
+Object.defineProperties(object4, {
+  Name: {
+    value: 'Nada',
+    writable: false
+  },
+  Age: {},
+  Gender:{
+    value: 'Female',
+  }
+});
+console.log(object4);//{Name: 'Raneen', Age: undefined, Gender: 'Female'}
+//------------------------------------------------------------------------------------------------
+// Method 5:  propertyIsEnumerable()
+// This method takes (prop)
+// Usage: This method determines if the specified property,is an enumerable own property of the object
+//Return boolean value true or false
+//Example
+const obj1 = { gender:"F" };
+const obj2 = { };
+//enumerable own property of the object
+obj1.name = "Nada";
+obj2.name="Alaa";
+//non enumerable own property of the object
+Object.defineProperty(obj1, 'age', {
+    value: '23', 
+    writable: false
+  });
+Object.defineProperty(obj2, 'age', {
+    value: '22', 
+    writable: false
+  });
+console.log(obj1.propertyIsEnumerable('name'));//true
+console.log(obj2.propertyIsEnumerable('gender'));//false
+console.log(obj2.propertyIsEnumerable('age'));//false
+//------------------------------------------------------------------------------------------------
+// Method 6:  hasOwn()
+// This method takes (prop)
+// Usage: This method determines if the specified property is an own property of the object
+//Return boolean value true or false
+//Example
+var Obj1 = { "gender":"F" };
+var Obj2 = { };
+Obj1.name = "Nada";
+Obj2.name="Alaa";
+Object.defineProperty(Obj1, 'age', {
+    value: '23', 
+    writable: false
+  });
+Object.defineProperty(Obj2, 'age', {
+    value: '22', 
+    writable: false
+  });
+console.log(Obj1.hasOwn('name'));//true
+console.log(Obj1.hasOwn('age'));//true
+console.log(Obj1.hasOwn('gender'));//true
+console.log(Obj2.hasOwn('gender'));//false
+//------------------------------------------------------------------------------------------------
+// Method 7: Object.getOwnPropertyDescriptor()
+//           Object.getOwnPropertyDescriptors()
+// first method takes (object_name, prop)
+//second methid takes (object_name) returns each propety alone
+// Usage: It is alternative to propertyIsEnumerable()
+//        This method returns an object describing a specific property of a given object
+//Return discriptor of property of object (writable, value, configurable, get, set, enumerable )
+//writable->true if can be modified else false      
+//configurable->true if can be changed or deleted else false
+//enumerable -> true then property treated as enumerable property else false
+//value-> value of property key
+//Example
+const obj1 = { gender:"F" };
+obj1.name = "Nada";
+Object.defineProperty(obj1, 'age', {
+    value: '23', 
+    writable: false
+  });
+const descriptor1 = Object.getOwnPropertyDescriptor(obj1, 'name');
+console.log(descriptor1.writable);//true
+console.log(descriptor1.configurable);//true
+console.log(descriptor1.value);//Nada
+console.log(descriptor1.enumerable);//true
+
+const descriptors = Object.getOwnPropertyDescriptors(obj1);
+console.log(descriptors);
+//------------------------------------------------------------------------------------------------
+// Method 8: Object.fromEntries()
+// first method takes Object.fromEntries(iterable) such as array or map
+// Usage: transforms a list of key-value pairs into an object. this object
+//Return A new object whose properties are given by the entries of the iterable.
+//Example
+const arr = [
+    ["0", "a"],
+    ["1", "b"],
+    ["2", "c"],
+  ];
+  const obj = Object.fromEntries(arr);
+  Object.defineProperty(obj, 'age', {
+    value: '23', 
+    writable: false
+  });
+  console.log(obj); // { 0: "a", 1: "b", 2: "c", age:"23" }
+  console.log(Object.values(obj));//['a', 'b', 'c'] //return own enumerable
+  
+//------------------------------------------------------------------------------------------------
+// Method 9: JSON.stringify()
+//  method takes (object_name)
+// Usage: converts object to string
+//Return object as string 
+//Example
+const object11 = {name:"Nada",
+                   age:"23"};
+alert(JSON.stringify(object11));
+//------------------------------------------------------------------------------------------------
+// Method 10: JSON.parse()
+//  method takes (string_name)
+// Usage: converts string to object
+//Return boolean value
+//Example
+const str ="Nada Alaa "
+console.log((JSON.stringify(str)));
+//------------------------------------------------------------------------------------------------
+*/
+  </script>
+</body>
+</html>

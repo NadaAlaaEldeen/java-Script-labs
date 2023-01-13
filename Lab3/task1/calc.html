@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Lab3</title>
+</head>
+<body>
+  <h1>Calc</h1>
+  <script>
+  
+ var fnum = prompt("Enter Your First number");
+ var op = prompt("Enter Operation:\n sum\n muli \n subtract \n division \n  moduls");
+ var snum = prompt("Enter Your Second number");
+ var result;
+ switch(op){
+            case "sum":
+                  result=Number(fnum)+Number(snum);
+                  alert("the result of:"+fnum+"+"+snum+"="+(result));
+                break;
+            case "muli":
+                  result=Number(fnum)*Number(snum);
+                  alert("the result of:"+fnum+"*"+snum+"="+(result));
+                
+                break;
+            case "subtract":
+                  result=Number(fnum)-Number(snum);
+                  alert("the result of:"+fnum+"-"+snum+"="+(result));
+                
+                break;
+            case "division":
+                 result=Number(fnum)/Number(snum);
+                  alert("the result of:"+fnum+"/"+snum+"="+(result));
+                
+                break;
+            case "moduls":
+            result=Number(fnum)%Number(snum);
+                  alert("the result of:"+fnum+"%"+snum+"="+(result));
+                
+                break; 
+            default:
+                alert("invalid operation......!");
+                          
+ }
+            
+
+ 
+  </script>
+</body>
+</html>

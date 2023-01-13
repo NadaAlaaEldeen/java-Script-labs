@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Lab3</title>
+</head>
+<body>
+  <h1>Sum & Average</h1>
+  <script>
+  
+ var num = prompt("enter how many number he wants to get the sum ");
+ const arr = new Array()
+ var sum=0;
+ if(num>0)
+ {
+  for(let i=0;i<num;i++)
+  {
+   arr[i] = prompt("Enter"+num+" numbers...\n number"+(i+1)+":")||0;
+   sum+=Number(arr[i]);
+  }
+ }
+ alert("the Entered Numbers:"+arr+"\n Sum="+sum+"\n Average="+(Number(sum)/Number(num)));
+
+//  var sum =0;
+// var count = Number(prompt("enter numbers count "));
+// for(var i=0;i<count;i++){
+//     sum += Number(prompt("enter number "+(i+1)));
+// }
+// alert(sum);
+
+</script>
+</body>
+</html>
