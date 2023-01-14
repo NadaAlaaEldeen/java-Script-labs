@@ -12,16 +12,16 @@
 ### Task 2
 [https://nadaalaaeldeen.github.io/java-Script-labs/Lab2/Task2/vowels.html]
 ### Task 3
-[https://nadaalaaeldeen.github.io/java-Script-labs/Lab2/Task2/hour.html]
+[https://nadaalaaeldeen.github.io/java-Script-labs/Lab2/Task3/hour.html]
 ## Lab 3
 ### Task 1
-[https://nadaalaaeldeen.github.io/java-Script-labs/Lab3/task1/login.html]
-[https://nadaalaaeldeen.github.io/java-Script-labs/Lab3/task1/calc.html]
-[https://nadaalaaeldeen.github.io/java-Script-labs/Lab3/task1/bounus.html]
+- [https://nadaalaaeldeen.github.io/java-Script-labs/Lab3/task1/login.html]
+* [https://nadaalaaeldeen.github.io/java-Script-labs/Lab3/task1/calc.html]
++ [https://nadaalaaeldeen.github.io/java-Script-labs/Lab3/task1/bounus.html]
 ### Task 2
-[https://nadaalaaeldeen.github.io/java-Script-labs/Lab3/task2/sum&avg.html]
-[https://nadaalaaeldeen.github.io/java-Script-labs/Lab3/task2/phonebook.html]
-[https://nadaalaaeldeen.github.io/java-Script-labs/Lab3/task2/bounus.html]
+- [https://nadaalaaeldeen.github.io/java-Script-labs/Lab3/task2/sum&avg.html]
+* [https://nadaalaaeldeen.github.io/java-Script-labs/Lab3/task2/phonebook.html]
++ [https://nadaalaaeldeen.github.io/java-Script-labs/Lab3/task2/bounus.html]
 ### Task 3
-[https://nadaalaaeldeen.github.io/java-Script-labs/Lab3/task3/arrays.html]
-[https://nadaalaaeldeen.github.io/java-Script-labs/Lab3/task3/objects.html]
+- [https://nadaalaaeldeen.github.io/java-Script-labs/Lab3/task3/arrays.html]
+* [https://nadaalaaeldeen.github.io/java-Script-labs/Lab3/task3/objects.html]
