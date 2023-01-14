@@ -1,6 +1,5 @@
 # java-Script-labs
 ## Lab 1
-![lab1](https://nadaalaaeldeen.github.io/java-Script-labs/Lab1/lab_1.docx)
 ### Task 1
 [https://nadaalaaeldeen.github.io/java-Script-labs/Lab1/task1]
 ### Task 2
