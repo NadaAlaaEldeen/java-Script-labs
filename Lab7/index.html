@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+<body>
+   <form  onsubmit="check()">
+     <input class="form" type="text" placeholder="username" onfocus="highlightInput(this) "requied>
+     <input class="form" type="password" placeholder="password" onfocus="highlightInput(this)"requied  >
+     <button class="form"type="submit">LOGIN</button>
+     <h3 id="t1">Not Registered? <span id="t2" onmouseover="alert('Registeration Not Avilable Now!')">Create an account</span></h3>
+    </form> 
+    
+    <!-------------------------------------------Java Script-------------------------------------->
+    <script>
+        //---------------Form Validating----------------- 
+        var input=document.getElementsByTagName("input");
+         for( var i in input)
+         {
+             input[i].style
+         }
+        
+         function highlightInput(elem)
+           {
+            elem.style.color="rgb(0 178 66)"; 
+            elem.style.background="white"; 
+            elem.style.outline="0 solid ";
+            elem.style.border="0.2vw solid grey"
+           }
+         function redfocus(element)
+           {
+            element.style.border="1vw solid red"; 
+           }
+    //---------------Form Styling-----------------    
+     document.body.style.backgroundColor="#66bd48";
+     document.getElementById("t2").style.color="rgb(0 178 66)";
+     document.getElementById("t1").style.color="#dfdfff";
+     document.getElementById("t1").style.fontSize="2vw";
+     document.getElementsByTagName("form")[0].style.backgroundColor="white";
+     document.getElementsByTagName("form")[0].style.margin="auto";
+     document.getElementsByTagName("form")[0].style.marginTop="8vw";
+     document.getElementsByTagName("form")[0].style.justifyContent="center";
+     document.getElementsByTagName("form")[0].style.padding="3vw";
+     document.getElementsByTagName("form")[0].style.display="flex";
+     document.getElementsByTagName("form")[0].style.justifyContent="center";
+     document.getElementsByTagName("form")[0].style.alignItems="center";
+     document.getElementsByTagName("form")[0].style.flexDirection="column";
+     document.getElementsByTagName("form")[0].style.width="40vw";
+     document.getElementsByTagName("form")[0].style.height="25vw";
+     var form=document.getElementsByClassName("form");
+    //  for( var i in form)
+     for(var i=0;i<3;i++)
+     {
+         form[i].style.margin="2%";
+         form[i].style.height="13%";
+         form[i].style.width="80%";
+         form[i].style.fontSize="2vw";
+         form[i].style.backgroundColor="#f2f2f2";   
+         form[i].style.border="0.1vw solid rgb(0 178 66)"; 
+         form[i].style.color="#dfdfff"; 
+         form[i].style.padding="2%"; 
+         form[2].style.backgroundColor="rgb(0 178 66)";
+         form[2].style.color="white";
+        }
+ 
+     function check()
+     {
+      var name=form[0].value;
+      var password=form[1].value;
+      // alert(`name is:${name}\n password is:${password}`);
+      if(name!="admin" && pass!=1234)
+      {
+        alert("wrong name & password...!")
+      }
+      else if(name!="admin")
+      {
+        alert("wrong name...!")
+      }
+      else if(password!=1234)
+      {
+        alert("wrong password...!")
+      }
+      return false
+     }
+    </script>
+</body>
+</html>

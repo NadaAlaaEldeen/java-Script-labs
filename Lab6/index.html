@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab6-JavaScript</title>
+  </head>
+  <body>
+    <script>
+        console.log(` output of part one \n -------------------`);
+        //-----------------part1----------------------
+        class Shape 
+        {
+
+            #name;
+            #sides;
+            #sideLength;
+            constructor(name,sides, sideLength) {
+            this.name = name;
+            this.sides = sides;
+            this.sideLength =sideLength;
+            }      
+            calcPerimeter() {
+                console.log(`${this.sides}`*`${this.sideLength}`);
+            }
+        }
+
+       s=new Shape("Square",4,5);
+       s.calcPerimeter();//output:20
+
+       t=new Shape("triangle",3,3)
+       t.calcPerimeter();//output:9
+       //-------------------------------------------
+
+       console.log(` output of part two \n -------------------`);
+        //-----------------part2----------------------
+        class Square extends Shape
+        {
+            constructor(sideLength) {
+                  super("square",4, sideLength)
+                }      
+            calcArea() {
+                console.log(`${this.sideLength}`*`${this.sideLength}`);
+            }
+
+        }
+         
+        square=new Square(2);
+        square.calcPerimeter();//output:8
+        square.calcArea();//output:4
+      //-------------------------------------------
+
+      console.log(` output of part three\n ---------------------`);
+     //-----------------part3----------------------
+     class Triple {
+  static customName = "Tripler";
+  static description = "I triple any number you provide";
+  static calculate(n = 1) {
+    return n * 3;
+  }
+}
+
+class SquaredTriple extends Triple {
+  static longDescription;
+  static description = "I square the triple of any number you provide";
+  static calculate(n) {
+    return super.calculate(n) * super.calculate(n);
+  }
+}
+
+console.log(Triple.description); // 'I triple any number you provide'
+console.log(Triple.calculate()); // 3
+console.log(Triple.calculate(6)); // 18
+
+
+
+console.log(SquaredTriple.calculate(3)); // 81 (not affected by parent's instantiation)
+console.log(SquaredTriple.description); // 'I square the triple of any number you provide'
+console.log(SquaredTriple.longDescription); // undefined
+console.log(SquaredTriple.customName); // 'Tripler'
+
+    </script>
+  </body>
+</html>

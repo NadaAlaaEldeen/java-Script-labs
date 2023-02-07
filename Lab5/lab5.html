@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Lab5</title>
+</head>
+<body>
+    <h1> Employee & office classes</h1>
+    <hr>
+    <script src="lab5.js"></script>
+    <script>
+         var obj=new office();
+         let flage=true;
+    while(flage)
+    {
+         var op = prompt("Enter Operation:\n 1-add employee\n  2-search \n 3-remove \n 4-show all \n 5-exit");
+         switch(+op)
+    {
+        case 1: 
+        obj.add();
+       // obj.hello();
+             break;
+        // case 2: obj.getEmployee()
+        //     break;
+        // case 3:obj.fire();
+        //     break;
+        // case 4:obj.getAllEmployees()
+        //     break;
+        case 5:
+             flage=false;
+    }
+
+    }
+    </script>
+</body>
+</html>
