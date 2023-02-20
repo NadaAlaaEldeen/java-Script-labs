@@ -1,0 +1,94 @@
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+       
+          }
+      .container {
+        width: 500px;
+        margin: 20px auto;
+        background-color: #f5f5f5;
+        border: 1px solid rgb(201, 194, 194);
+      }
+      .form {
+        border-radius: 6px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+      }
+      .input {
+        padding: 10px;
+        border: 1px solid rgb(201, 194, 194);
+        border-radius: 6px;
+        flex: 1;
+      }
+
+      .add {
+        border: none;
+        background-color: rgb(51 122 183);
+        color: white;
+        padding: 14px;
+        border-radius: 6px;
+        margin-left: 10px;
+      }
+      .tasks {
+        margin-top: 20px;
+        border-radius: 6px;
+        padding: 20px;
+      }
+      .tasks .task {
+        background-color: white;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.3s;
+        cursor: pointer;
+        border: 1px solid #ccc;
+      }
+      .task
+      {
+        flex-wrap: wrap;
+      }
+      /* for testing some properties */
+      /* .tasks .task:not(:last-child) {
+       background-color: aqua;
+      } */
+      /* .tasks .task:first-child {
+       background-color: rgb(0, 255, 34);
+      } */
+      /* .tasks .task:nth-child(5) {
+       background-color: rgb(255, 0, 0);
+      } */
+      .tasks .task:hover {
+        background-color: #d9e9d2;
+      }
+      /* .tasks .task.done {
+        opacity: 0.5;
+      } */
+      .tasks .task span {
+        font-weight: bold;
+        font-size: 10px;
+        background-color:#d9534f;
+        font-size: larger;
+        color: white;
+        padding: 2px 6px;
+        margin:0 3px;
+        border-radius: 4px;
+      }
+      span.dne
+      {
+        background-color: #f5f5f5 !important ;
+      }
+      .main, .done
+      {
+        background-color: transparent !important;
+        color: gray!important;
+        font-weight: lighter !important;
+        border: 0 !important;
+      }
+      
+    
+      .done
+      {
+        text-decoration: line-through;
+      }
