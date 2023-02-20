@@ -26,7 +26,7 @@
 * [https://nadaalaaeldeen.github.io/java-Script-labs/Lab3/task3/objects.html]
 ## Lab8
 [https://nadaalaaeldeen.github.io/java-Script-labs/Lab8]
-## [https://nadaalaaeldeen.github.io/java-Script-labs/Lab9]
-Lab9/Slider
+## Lab9
+ [https://nadaalaaeldeen.github.io/java-Script-labs/Lab9/Slider]
 ## WorkShop
 - [https://nadaalaaeldeen.github.io/java-Script-labs/WorkShop/ToDoList/]
