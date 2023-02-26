@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+<body>
+   <form name="LoginForm" onsubmit="return validateForm()">
+     <input class="form" name="email"type="text" placeholder="useremail" onfocus="highlightInput(this) "requied>
+     <div class="error" id="emailErr"></div>
+     <input class="form" name="pass"type="password" placeholder="password" onfocus="highlightInput(this)"requied  >
+     <div class="error" id="passErr"></div>
+     <button class="form"type="submit">LOGIN</button>
+     <h3 id="t1">Not Registered? <span id="t2" onmouseover="alert('Registeration Not Avilable Now!')">Create an account</span></h3>
+    </form> 
+    
+    
+     <script src="validate.js"></script>
+</body>
+</html>
