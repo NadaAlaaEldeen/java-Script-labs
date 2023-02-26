@@ -27,8 +27,8 @@
 ## Lab8
 [https://nadaalaaeldeen.github.io/java-Script-labs/Lab8]
 ## Lab9
- [https://nadaalaaeldeen.github.io/java-Script-labs/Slider]
- [https://nadaalaaeldeen.github.io/java-Script-labs/Clock]
+ - [https://nadaalaaeldeen.github.io/java-Script-labs/Slider]
+ + [https://nadaalaaeldeen.github.io/java-Script-labs/Clock]
 ## WorkShop
 - [https://nadaalaaeldeen.github.io/java-Script-labs/ToDoList/]
 + [https://nadaalaaeldeen.github.io/java-Script-labs/FormValidation/]
